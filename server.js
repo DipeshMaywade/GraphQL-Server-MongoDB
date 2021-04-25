@@ -3,6 +3,10 @@ const dotenv = require('dotenv')
 const app = express();
 dotenv.config()
 
+const connection = require('./config/config')
+
+connection.connectDB()
+
 app.get('/start', (req, res)=> {
     res.send("Ok ")
 })
